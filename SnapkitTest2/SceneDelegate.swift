@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let view = DetailStocksView()
+        let view = DetailStocksContentView()
         view.render(props: .init(image: UIImage(named: "prod_image")))
         window?.rootViewController = DetailStocksViewController(contentView: view)
         

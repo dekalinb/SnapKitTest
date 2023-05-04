@@ -13,11 +13,11 @@ protocol DetailStocksViewType: AnyObject {
 
 class DetailStocksViewController: UIViewController {
     
-    private let contentView: DetailStocksView
+    private let contentView: DetailStocksContentView
     private var configurator: DetailStocksConfiguratorType = DetailStocksConfigurator()
     var presenter: DetailStocksPresenterType?
     
-    init(contentView: DetailStocksView) {
+    init(contentView: DetailStocksContentView) {
         self.contentView = contentView
         
         super.init(nibName: nil, bundle: nil)
@@ -59,9 +59,9 @@ private extension DetailStocksViewController {
     func setupButton() {
 //        contentView.someButton.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
 //        contentView.tableView.delegate = self
-        contentView.onTapButton = { [unowned self] in
-            presenter?.didTapButton()
-        }
+//        contentView.onTapButton = { [unowned self] in
+//            presenter?.didTapButton()
+//        }
     }
     
     @objc func buttonDidTap() {
